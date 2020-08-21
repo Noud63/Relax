@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url('bg.jpg');
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  background-position: center ;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.bgImage {
+  background: url('bg2.png');
+  background-position: center ;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#underwaterVideo {
+  display: none;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+.play {
+    color: black;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px) {
+  .play {
+     font-size: 1.2rem
+  }
+}
+
+.header {
+  width: 100vw;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  box-shadow: 0px 4px 4px #1e4740;
+  padding-right: 20px;
+}
+
+.header2 {
+  position: fixed;
+  top:0;
+  width: 100vw;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  box-shadow: 0px 4px 4px #1e4740;
+  z-index: 1;
+}
+
+.tab {
+  padding: 20px 20px 20px 40px;
+  width: 150px;
+}
+
+.tab2 {
+  width: 100px;
+  height: auto;
+}
+
+@media only screen and (max-width: 500px) {
+  .tab {
+      padding-left: 10px;
+  }
+}
+
+.soundPicker {
+  width: 45rem;
+  display : flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1000px) {
+  .soundPicker {
+    width: 35rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .soundPicker{
+      height: 80%;
+      width: 15rem;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+}
+
+.icon2 {
+  content: url(muted.png);
+  width: 30px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.icon {
+  content: url(sound.png);
+  width: 30px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px) {
+  .icon2, .icon {
+      width: 20px;
+      margin-right: 10px;
+  }
+}
+
+.palette {
+  width: 25px;
+}
+
+@media only screen and (max-width: 800px) {
+  .palette {
+      display: none;
+  }
+}
+
+.wrap {
+  width: 45rem;
+  display : flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-left: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .wrap{
+      height: 7rem;
+      width: 35rem;
+      margin-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .wrap{
+      height: 7rem;
+      width: 10rem;
+      flex-direction: column;
+      justify-content: space-evenly;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .bracket{
+      content: url(brackets.png);
+      height: 7rem;
+  }
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  max-width: 520px;
+  height: 540px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 500px) {
+   .wrapper {
+     margin: 10px auto;
+   }
+}
+
+.container {
+  display : flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.gradient-circle {
+    background: conic-gradient(
+      #79d1bf 0%,
+      #79d1bf 40%,
+      #fff 40%,
+      #fff 60%,
+      #296158 60%,
+      #296158 100%
+    );
+    height: 320px;
+    width: 320px;
+    z-index: -2;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+  }
+
+  .gradient-circle2 {
+    background: conic-gradient(
+      #79c4d1 0%,
+      #79c4d1 40%,
+      #fff 40%,
+      #fff 60%,
+      #215c64 60%,
+      #215c64 100%
+    );
+    height: 320px;
+    width: 320px;
+    z-index: -2;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+  }
+
+.circle {
+    background-color: #081815;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.pointer-container {
+    position: absolute;
+    top: -40px;
+    left: 140px;
+    width: 20px;
+    height: 190px;
+    animation: rotate 10s linear forwards infinite;
+    transform-origin: bottom center; 
+}
+  
+.pointer {
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: block;
+}
+
+.container.grow {
+    animation: grow 4s linear forwards;
+}
+
+.container.shrink {
+    animation: shrink 4s linear forwards;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes grow {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.4);
+    }
+}
+
+@keyframes shrink {
+    from {
+        transform: scale(1.4);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@media only screen and (max-width: 500px) {
+  @keyframes grow {
+    from {
+      transform: scale(.8);
+  }
+  to {
+      transform: scale(1);
+  }
+}
+}
+
+@media only screen and (max-width: 500px) {
+  @keyframes shrink {
+    from {
+      transform: scale(1);
+  }
+  to {
+      transform: scale(.8);
+  }
+}
+}
+
+#text {
+  font-size: 1.4rem;
+  text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #79d1bf, 0 0 30px #79d1bf, 0 0 40px #79d1bf, 0 0 55px #79d1bf, 0 0 75px #79d1bf;
+}
+

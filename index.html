@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:,">
+    <title>Relaxation</title>
+</head>
+
+<body >
+
+    <!-- you only need one sound file to refer to-->
+    <audio id="sound" class="sound">
+        <source src="scuba.mp3">
+    </audio>
+
+    <video autoplay muted loop id="underwaterVideo">
+        <source src="underwater.mp4" type="video/mp4">
+      </video>
+
+    <div class="header">
+             <div class="tab">
+                 <img src="tab.png" class="tab2">
+            </div>
+
+    <div class="soundPicker">
+       
+            <div class="icon2"><img src="muted.png"></div>
+            <div class="bracket"></div>
+            <div class="wrap">
+                <div data-sound="scuba.mp3"class="play">Scuba-diving</div>
+                <div data-sound="rain.mp3" class="play">Rain</div>
+                <div data-sound="meditate.mp3" class="play">Ambient</div>
+                <img src="theme.png" class="palette">
+                <div class="theme play">Change Theme</div>
+            </div>
+    </div>
+    </div>
+    
+    <div class="wrapper">
+       
+       <div class="container" id="container">
+
+           <div class="circle"></div>
+
+               <p id="text"></p>
+
+                    <div class="pointer-container">
+                        <span class="pointer"></span>
+                    </div>
+
+           <div class="gradient-circle"></div>
+
+    </div>
+    
+    </div>
+    
+    
+<script src="app.js"></script>
+
+</body>
+
+</html>
