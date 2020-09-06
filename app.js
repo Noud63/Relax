@@ -39,7 +39,7 @@ picker.forEach( el => {
         aud.classList.add('icon')
         playSound()
     })
-})
+});
 
 
 function playSound(){
@@ -49,42 +49,53 @@ function playSound(){
     }else{
         sound.pause()
     }
-}
+};
+
 
 aud.addEventListener('click', controlAudio)
 function controlAudio() {
     aud.classList.toggle('icon')
     playSound()
-    
-}
+};
+
+
+const video = document.querySelector('#underwaterVideo');
+let videoPromise = video.play();
+function videoPlay() {
+    if( videoPromise !== undefined ) {
+    videoPromise.then( () => {
+        video.muted = false
+        video.style.display = 'flex';
+    }).catch( error => {
+        console.log('No Video!')
+    })
+  }
+};
+
 
 //Toggle between themes
-const video = document.querySelector('#underwaterVideo');
 const gradient = document.querySelector('.gradient-circle');
-const head = document.querySelector('.header');
 const change = document.querySelector('.theme');
 
 change.addEventListener('click', function(){
-    
-    if(change.classList.contains('theme')){        // !change.classList.contains('newTheme')
-        sound.src = "sounds/scuba.mp3"
+        aud.classList.toggle('icon');
+    if(change.classList.contains('theme') ){        // !change.classList.contains('newTheme')
         video.style.display = 'flex';
-        head.classList.add('header2');
+        video.play();
+        sound.src = "sounds/scuba.mp3"
         change.classList.add('newTheme');
         change.classList.remove('theme');
         gradient.classList.add('gradient-circle2')
-        aud.classList.toggle('icon');
     }else if(change.classList.contains('newTheme')){
         sound.src = "sounds/scuba.mp3"
         video.style.display = 'none'
-        head.classList.remove('header2');
         change.classList.remove('newTheme');
         change.classList.add('theme');
         gradient.classList.remove('gradient-circle2');
-        aud.classList.toggle('icon');
     }
-   
-})
+});
+
+
 
 /*
 var myAudio = document.getElementById("myAudio");
