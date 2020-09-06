@@ -8,8 +8,7 @@ const holdTime = totalTime / 5                         // 2000 ms
 breatheAnimation()                                     // Call function immediately
 
 function breatheAnimation() {
-   
-    text.innerHTML = 'Breathe In!';
+   text.innerHTML = 'Breathe In!';
     container.className = 'container grow';            // or container.classList.add('grow')
 
     setTimeout(() => {                                 /* setTimeOut() calls function once after,
@@ -67,18 +66,20 @@ const change = document.querySelector('.theme');
 
 change.addEventListener('click', function(){
     
-    if(!change.classList.contains('newTheme')){
-        sound.src = "scuba.mp3"
+    if(change.classList.contains('theme')){        // !change.classList.contains('newTheme')
+        sound.src = "sounds/scuba.mp3"
         video.style.display = 'flex';
         head.classList.add('header2');
         change.classList.add('newTheme');
+        change.classList.remove('theme');
         gradient.classList.add('gradient-circle2')
         aud.classList.toggle('icon');
     }else if(change.classList.contains('newTheme')){
-        sound.src = "scuba.mp3"
+        sound.src = "sounds/scuba.mp3"
         video.style.display = 'none'
         head.classList.remove('header2');
         change.classList.remove('newTheme');
+        change.classList.add('theme');
         gradient.classList.remove('gradient-circle2');
         aud.classList.toggle('icon');
     }

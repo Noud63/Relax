@@ -7,7 +7,7 @@
 }
 
 body {
-  background: url('bg.jpg');
+  background: url('img/bg.jpg');
   color: #fff;
   font-family: 'Montserrat', sans-serif;
   background-position: center ;
@@ -112,14 +112,14 @@ body {
 }
 
 .icon2 {
-  content: url(muted.png);
+  content: url(img/muted.png);
   width: 30px;
   margin-right: 20px;
   cursor: pointer;
 }
 
 .icon {
-  content: url(sound.png);
+  content: url(img/sound.png);
   width: 30px;
   cursor: pointer;
 }
@@ -169,7 +169,7 @@ body {
 
 @media only screen and (max-width: 800px) {
   .bracket{
-      content: url(brackets.png);
+      content: url(img/brackets.png);
       height: 7rem;
   }
 }
@@ -198,6 +198,12 @@ body {
   width: 300px;
   margin: 0 auto;
   position: relative;
+}
+
+@media only screen and (max-height: 720px) {
+  .container{
+      margin-top: 50px;
+  }
 }
 
 .gradient-circle {
