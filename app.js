@@ -60,8 +60,9 @@ function controlAudio() {
 
 
 const video = document.querySelector('#underwaterVideo');
-let videoPromise = video.play();
+
 function videoPlay() {
+    let videoPromise = video.play();
     if( videoPromise !== undefined ) {
     videoPromise.then( () => {
         video.muted = false
