@@ -60,7 +60,6 @@ function controlAudio() {
 
 
 const video = document.querySelector('#underwaterVideo');
-
 function videoPlay() {
     let videoPromise = video.play();
     if( videoPromise !== undefined ) {
@@ -79,18 +78,16 @@ const gradient = document.querySelector('.gradient-circle');
 const change = document.querySelector('.theme');
 
 change.addEventListener('click', function(){
-        
+        sound.src = "sounds/scuba.mp3"
     if(change.classList.contains('theme') ){        // !change.classList.contains('newTheme')
         aud.classList.toggle('icon');
         video.style.display = 'flex';
         video.play();
-        sound.src = "sounds/scuba.mp3"
         change.classList.add('newTheme');
         change.classList.remove('theme');
         gradient.classList.add('gradient-circle2')
     }else if(change.classList.contains('newTheme')){
         aud.classList.toggle('icon');
-        sound.src = "sounds/scuba.mp3"
         video.style.display = 'none'
         change.classList.remove('newTheme');
         change.classList.add('theme');
