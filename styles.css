@@ -42,7 +42,9 @@ body {
 
 @media only screen and (max-width: 1000px) {
   .play {
-     font-size: 1.2rem
+     font-size: 1.2rem;
+     cursor: pointer;
+     pointer-events: auto;
   }
 }
 
@@ -165,6 +167,7 @@ body {
 /* -------------------------- End Menu ------------------------ */
 
 /* ---------------- Expanding/contracting circle -------------- */
+
 .wrapper {
   position: absolute;
   top: 50%;
