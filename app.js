@@ -78,8 +78,9 @@ const gradient = document.querySelector('.gradient-circle');
 const change = document.querySelector('.theme');
 
 change.addEventListener('click', function(){
-        aud.classList.toggle('icon');
+        
     if(change.classList.contains('theme') ){        // !change.classList.contains('newTheme')
+        aud.classList.toggle('icon');
         video.style.display = 'flex';
         video.play();
         sound.src = "sounds/scuba.mp3"
@@ -87,6 +88,7 @@ change.addEventListener('click', function(){
         change.classList.remove('theme');
         gradient.classList.add('gradient-circle2')
     }else if(change.classList.contains('newTheme')){
+        aud.classList.toggle('icon');
         sound.src = "sounds/scuba.mp3"
         video.style.display = 'none'
         change.classList.remove('newTheme');
