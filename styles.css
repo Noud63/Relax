@@ -181,6 +181,13 @@ body {
   justify-content: center;
 }
 
+@media only screen and (max-height: 7200px) {
+  .wrapper {
+      margin-top: 50px;
+      border: 1px solid white;
+  }
+}
+
 .container {
   display : flex;
   justify-content: center;
