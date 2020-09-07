@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
-@media (orientation: landscape) {
+@media (orientation: portrait) {
   body {
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
