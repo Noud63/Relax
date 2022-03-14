@@ -1,14 +1,14 @@
 const container = document.querySelector('.container');
 const text = document.querySelector('#text');
 
-const totalTime = 10000                                // 10000 ms
+const totalTime = 15000                                // 10000 ms
 const breatheTime = (totalTime / 5) * 2;               // 4000 ms
 const holdTime = totalTime / 5                         // 2000 ms
 
 breatheAnimation()                                     // Call function immediately
 
 function breatheAnimation() {
-   text.innerHTML = 'Breathe In!';
+    text.innerHTML = 'Breathe In!';
     container.className = 'container grow';            // or container.classList.add('grow')
 
     setTimeout(() => {                                 /* setTimeOut() calls function once after,
@@ -28,13 +28,13 @@ setInterval(() => {                                     // setInterval() calls t
 }, totalTime);
 
 
-//Toggle between background sound 
+//Toggle between background sounds 
 const sound = document.querySelector('.sound')
 const aud = document.querySelector('.icon2')
 const picker = document.querySelectorAll('.play');
 
-picker.forEach( el => {
-    el.addEventListener( 'click', function() {
+picker.forEach(el => {
+    el.addEventListener('click', function () {
         sound.src = this.getAttribute("data-sound")
         aud.classList.add('icon')
         playSound()
@@ -42,11 +42,11 @@ picker.forEach( el => {
 });
 
 
-function playSound(){
-    if(sound.paused){
+function playSound() {
+    if (sound.paused) {
         sound.play()
         sound.loop = true
-    }else{
+    } else {
         sound.pause()
     }
 };
@@ -62,14 +62,14 @@ function controlAudio() {
 const video = document.querySelector('#underwaterVideo');
 function videoPlay() {
     let videoPromise = video.play();
-    if( videoPromise !== undefined ) {
-    videoPromise.then( () => {
-        video.muted = false
-        video.style.display = 'flex';
-    }).catch( error => {
-        console.log('No Video!')
-    })
-  }
+    if (videoPromise !== undefined) {
+        videoPromise.then(() => {
+            video.muted = false
+            video.style.display = 'flex';
+        }).catch(error => {
+            console.log('No Video!')
+        })
+    }
 };
 
 
@@ -77,16 +77,16 @@ function videoPlay() {
 const gradient = document.querySelector('.gradient-circle');
 const change = document.querySelector('.theme');
 
-change.addEventListener('click', function(){
-        sound.src = "sounds/scuba.mp3"
-    if(change.classList.contains('theme') ){        // !change.classList.contains('newTheme')
+change.addEventListener('click', function () {
+    sound.src = "sounds/scuba.mp3"
+    if (change.classList.contains('theme')) {        // !change.classList.contains('newTheme')
         aud.classList.toggle('icon');
         video.style.display = 'flex';
         video.play();
         change.classList.add('newTheme');
         change.classList.remove('theme');
         gradient.classList.add('gradient-circle2')
-    }else if(change.classList.contains('newTheme')){
+    } else if (change.classList.contains('newTheme')) {
         aud.classList.toggle('icon');
         video.style.display = 'none'
         change.classList.remove('newTheme');
@@ -108,9 +108,10 @@ function togglePlay() {
 myAudio.onplaying = function() {
   isPlaying = true;
 };
+
 myAudio.onpause = function() {
   isPlaying = false;
 };
 */
-    
+
 
